@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifólio</title>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Logo do site -->
+        <a href="#" class="logo">MTS<strong class="ponto">.</strong></a>
+
+        <!-- Navegação principal -->
+        <nav>
+            <div class="tab-buttons">
+                <!-- Botões de navegação entre as seções -->
+                <button class="tab-btn active" content-id="home"><strong>Sobre Mim</strong></button>
+                <button class="tab-btn" content-id="formacao"><strong>Formação</strong></button>
+                <button class="tab-btn" content-id="portifolio"><strong>Portifólio</strong></button>
+                <button class="tab-btn" content-id="contatos"><strong>Contatos</strong></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seções de conteúdo -->
+    <div class="tab-contents">
+        <!-- Seção "Sobre Mim" -->
+        <div class="content show" id="home">
+            <div class="infos">
+                <h1 class="titul">SOBRE MIM</h1>
+                <br>
+                <h3>Olá! Sou o <span>Mateus</span></h3>
+                <p>
+                    Tenho 19 anos e vivo em Araucária, Paraná. Sou uma pessoa extrovertida e carismática, com uma paixão por aprender e me desenvolver continuamente. Acredito que ser focado e dedicado é essencial para alcançar meus objetivos e enfrentar novos desafios.
+                    <br><br>
+                    Nos meus momentos livres, adoro passar tempo com minha namorada e me envolver em atividades esportivas, especialmente futebol e basquete. Também sou fã de videogames e recentemente tenho explorado o mundo da programação, o que tem sido uma experiência extremamente gratificante.
+                    <br><br>
+                    Estou sempre em busca de novas oportunidades para crescer, tanto pessoal quanto profissionalmente, e acredito que minha dedicação e entusiasmo me ajudam a alcançar meus objetivos e superar desafios.
+                </p>
+                <br><br><br><br>
+            </div>
+        </div>
+
+        <!-- Seção "Formação" -->
+        <div class="content" id="formacao">
+            <div class="infos">
+                <h1 class="titul">FORMAÇÃO</h1>
+                <br>
+                <p>
+                    Concluí o ensino médio com um curso técnico em Administração, o que me proporcionou uma sólida base nas áreas de gestão e negócios.
+                    <br><br>
+                    Em 2024, decidi expandir meus horizontes e iniciei minha jornada no mundo da programação. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na Universidade Uninter, na modalidade EAD, onde estou aprofundando meus conhecimentos e habilidades em tecnologia e desenvolvimento de software.
+                </p>
+                <br><br><br><br>
+            </div>
+        </div>
+
+        <!-- Seção "Portfólio" -->
+        <div class="content" id="portifolio">
+            <div class="infos">
+                <h1 class="titul">PORTIFÓLIO</h1>
+                <br>
+                <p>
+                    Ao longo da faculdade, tenho realizado diversos projetos acadêmicos que têm sido fundamentais para a aplicação prática dos conhecimentos adquiridos. Esses projetos não apenas consolidam o que foi aprendido em sala de aula, mas também proporcionam uma experiência prática que enriquece meu desenvolvimento profissional. Através desses trabalhos, posso explorar soluções para problemas reais, aprimorar minhas habilidades técnicas e ganhar confiança para enfrentar desafios no ambiente de trabalho.<br><br>
+
+                    <img src="BD.png" class="imagens" href="https://github.com/mATHxa/Primeiro-Projeto-de-Banco-de-Dados.git">
+                     <p class="portTexto">Desenvolvi um projeto para criar um banco de dados relacional, definindo entidades, atributos e relacionamentos entre tabelas. Utilize comandos SQL para criar tabelas, definir chaves primárias e estrangeiras, e inserir dados, garantindo a integridade e acessibilidade das informações.</p><br><br>
+
+
+                    <img src="python.png" class="imagens" href="https://github.com/mATHxa/Primeiro-Projeto-em-Python.git">
+                    <p class="portTexto">Desenvolvi um projeto em Python para armazenamento de dados, utilizando ferramentas e bibliotecas para gerenciar e persistir informações de forma eficiente, desde a configuração do ambiente até a implementação de funcionalidades para manipulação e recuperação de dados.</p>
+
+
+                </p>
+                <br><br><br><br>
+            </div>
+        </div>
+
+        <!-- Seção "Contatos" -->
+        <div class="content" id="contatos">
+            <div class="infos">
+                <h1 class="titul">CONTATOS</h1>
+                <h3>Tem uma pergunta ou proposta, ou apenas quer dizer olá? Vá em frente.</h3>
+
+                <!-- Formulário de contato -->
+                <form id="fomulario" action="https://api.staticforms.xyz/submit" method="post">
+                    <!-- Campo de nome -->
+                    <label for="">Nome</label><br>
+                    <input type="text" name="nome" placeholder="Digite seu nome" autocomplete="off" required><br>
+                    
+                    <!-- Campo de e-mail -->
+                    <label for="">E-mail</label><br>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required><br>
+                    
+                    <!-- Campo de mensagem -->
+                    <label for="">Sua Mensagem</label><br>
+                    <textarea name="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea><br>
+                    
+                    <!-- Botão de envio -->
+                    <button type="submit">Enviar</button>
+
+                    <!-- Chave de acesso para enviar mensagens do formulário para o e-mail -->
+                    <input type="hidden" name="accessKey" value="473b8662-7fc5-4e1c-8545-4198225359ac">
+
+                    <!-- Página de redirecionamento após o envio do formulário -->
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé com links para redes sociais -->
+    <footer class="consideracoes">
+        <br><br><br><br>
+        <div>© Mateus Silva 2024</div>
+        <div><a href="http://linkedin.com/in/mateus-da-silva-dos-santos-bb1477257">LinkedIn</a></div>
+        <div><a href="https://github.com/mATHxa">GitHub</a></div>
+        <br><br><br><br>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="func.js"></script>
+</body>
+
+</html>

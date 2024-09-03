@@ -1,0 +1,337 @@
+/* Importando fontes externas para serem usadas no site */
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
+
+/* Esconde o conteúdo por padrão */
+.content{
+    display: none;
+}
+
+/* Mostra o conteúdo quando a classe 'show' é aplicada */
+.content.show{
+    display: flex;
+}
+
+/* Reset de estilos padrão para margens, padding, bordas e definição da fonte padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif
+}
+
+/* Definição do tamanho da fonte base para uso de rem */
+html{
+    font-size: 62,5%; /* Equivale a 10px */
+}
+
+/* Estilo do corpo da página */
+body{
+    padding: 9%;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(24, 24, 24);
+    color: white;
+}    
+
+/* Estilo do cabeçalho fixo */
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index: 100;
+}
+
+/* Estilo do logo */
+.logo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    color: rgb(0, 38, 255);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease; 
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+/* Cor do ponto destacado no logo */
+.ponto{
+    color: rgb(255, 208, 0);
+}
+
+/* Estilo para contatos no cabeçalho */
+.contacts{
+    color: blue;
+    
+}
+.contacts:hover{
+    transform: scale(1.1);
+}
+
+/* Seção de considerações no rodapé */
+.consideracoes{    
+    color: rgb(255, 208, 0);
+    margin-top: 400px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    align-items: center;
+    justify-content:space-between;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Links dentro da seção de considerações */
+.consideracoes a{    
+    color: rgb(255, 208, 0);
+}
+
+/* Estilos para botões de navegação */
+nav button{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    background-color: transparent;
+}
+
+/* Efeitos de hover e ativo para botões de navegação */
+nav button:hover, 
+nav button.active{
+    color: rgb(255, 208, 0);
+    border-bottom: 3px solid rgb(255, 208, 0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Estilos de navegação para telas menores (responsivo) */
+@media(max-width:995px){
+    nav{
+        position: flex;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(255, 208, 0);
+        border-bottom: 3px solid rgb(255, 208, 0);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block; /* Exibe a navegação quando ativa */
+    }
+
+    nav button {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav button:hover,
+    nav button:active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(255, 208, 0);
+    }
+}
+
+/* Estilo das seções de conteúdo */
+tab-contents{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+
+/* Alinhamento do conteúdo dentro de cada aba */
+.tab-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(24, 24, 24);
+}
+
+/* Estilo para os títulos das seções */
+.titul{
+    color: rgb(255, 208, 0);
+    margin-left: 10px;
+    margin-top: 100px;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Estilo para os spans */
+span{
+    color: rgb(255, 208, 0);
+}
+
+/* Estilo para títulos nas seções de informações */
+.infos h3{
+    margin-left: 10px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Estilo para os parágrafos nas seções de informações */
+.infos p{
+    margin-left: 10px;
+    font-size: 1.6rem;
+}
+
+/* Estilo padrão para o conteúdo das abas */
+.tab-contents{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+/* Estilo para spans dentro do conteúdo das abas */
+.tab-contents span{
+    position: relative;
+
+}
+
+/* Animação do cursor para textos dinâmicos */
+.tab-contents span::after{
+    content: "";
+    background-color: rgb(24, 24, 24);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+/* Animação do cursor piscante */
+@keyframes cursor{
+    to{
+        border-left: 3px solid rgb(255, 208, 0);
+    }
+}
+
+/* Estilo para a seção de contatos */
+.contatos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 10px 45px;
+    width: 500px;
+}
+
+/* Estilo para a seção de contatos */
+form label{
+    color: rgb(255, 208, 0);
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+/* Estilo dos campos de entrada nos formulários */
+form input{
+    width: 400px;
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Estilo das áreas de texto nos formulários */
+form textarea{
+    width: 400px;
+    padding: 15px;
+    font-size: 17px;
+}
+
+/* Estilo do botão de envio nos formulários */
+form button{
+    width: 400px;
+    padding: 15px;
+    color: aliceblue;
+    background-color: transparent;
+    border: 1px solid rgb(255, 208, 0);
+}
+form button:hover{
+    cursor: pointer;
+}
+
+
+/* Estilo para a seção principal */
+.main{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #161616;
+    flex-direction: column;
+}
+
+/* Estilo para textos grandes na seção principal */
+.text{
+    font-size: 55px;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+
+/* Estilo para parágrafos na seção principal */
+.paragrafo{
+    font-size: 25px;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+
+/* Estilo para botões de volta */
+.back{
+    color: aliceblue;
+    border: 1px solid rgb(255, 208, 0);
+    padding: 15px;
+    margin: 30px;
+}
+
+/* Efeito de hover no botão de volta */
+.back:hover{
+   cursor: pointer;
+   background-color: aliceblue;
+   color: #000;
+}
+
+/* Estilo das imagens */
+.imagens{
+display: inline;
+flex-direction: column;
+width: 560px;
+height: 340px;
+margin: 14px;
+float: left;
+}
+
+/* Estilo do texto */
+.portTexto{    
+    width: 500px;
+    display: inline-block;
+}
