@@ -123,47 +123,6 @@ nav button.active{
     transform: scale(1.1);
 }
 
-/* Estilos de navegação para telas menores (responsivo) */
-@media(max-width:995px){
-    nav{
-        position: flex;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid rgb(255, 208, 0);
-        border-bottom: 3px solid rgb(255, 208, 0);
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-    }
-
-    nav.active{
-        display: block; /* Exibe a navegação quando ativa */
-    }
-
-    nav button {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav button:hover,
-    nav button:active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid rgb(255, 208, 0);
-    }
-}
-
-/* Estilo das seções de conteúdo */
-tab-contents{
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
-}
-
-
 /* Alinhamento do conteúdo dentro de cada aba */
 .tab-content{
     display: flex;
@@ -334,4 +293,10 @@ float: left;
 .portTexto{    
     width: 500px;
     display: inline-block;
+}
+
+@media screen and(max-width:1200px){
+    .content{
+        margin-top: 40px;
+    }
 }
